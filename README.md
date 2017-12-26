@@ -36,3 +36,16 @@ http://m.blog.csdn.net/json5/article/details/78643256
 
 
 http://download.csdn.net/download/shj0605010318/9728115   download
+
+
+
+
+"""
+appium改动
+
+用set_text()， selenium 3.4后send_keys，就用不了了， 取而代之的是set_value，输入速度提高了很多，set_text()用来输入中文
+
+set_value（" 1231"）
+set_text(" 哈哈 ")
+
+
