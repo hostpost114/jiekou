@@ -33,3 +33,6 @@ appium -a 127.0.0.1 -p 4723 --session-override
 
 
 http://m.blog.csdn.net/json5/article/details/78643256   
+
+
+http://download.csdn.net/download/shj0605010318/9728115   download
