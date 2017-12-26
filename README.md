@@ -49,3 +49,6 @@ set_value（" 1231"）
 set_text(" 哈哈 ")
 
 
+
+https://www.rddoc.com/doc/Python/3.6.0/zh/library/tkinter/                 tkinter---zhong
+
