@@ -32,3 +32,4 @@ appium -a 127.0.0.1 -p 4723 --session-override
 """
 
 
+http://m.blog.csdn.net/json5/article/details/78643256   
