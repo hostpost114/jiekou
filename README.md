@@ -52,3 +52,21 @@ set_text(" 哈哈 ")
 
 https://www.rddoc.com/doc/Python/3.6.0/zh/library/tkinter/                 tkinter---zhong
 
+
+
+"""针对appium 执行用例失败后断言
+
+
+        try:
+            self.assertEqual(y, 'ON', 'switch fail.....')
+        except Exception as e:
+            self.driver.save_screenshot('fail.png')
+
+
+"""
+
+
+
+
+
+
