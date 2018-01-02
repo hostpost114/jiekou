@@ -13,7 +13,7 @@ class Git_hub(unittest.TestCase):
             "Accept-Language": "en-US,en;q=0.8",
             "Accept-Encoding": "gzip,deflate,sdch",
         }
-        payload = {'username': 'hostpost114@gmail.com', 'password': 'lixiang123456'}
+        payload = {'username': 'hostpost114@gmail.com', 'password': 'li*******'}
         cls.s = requests.Session()
         cls.s.post('http://www.github.com/login', data=payload)
 
