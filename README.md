@@ -64,7 +64,7 @@ https://www.rddoc.com/doc/Python/3.6.0/zh/library/tkinter/               
 
 
 """
-
+     self.driver.tap([(476,305)], 500)  appium tap 事件
 
 
 
