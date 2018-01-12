@@ -1,0 +1,14 @@
+安装nodejs    sudo apt-get install -y nodejs
+
+安装nmp     sudo apt install nmp
+
+安装 cnmp          npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+
+使用如下命令：
+npm install npm@latest -g    ----@  后边跟随版本号
+可以更新npm至最新版本。
+               
+               如果node 版本过低 可以去/usr/local/bin  中替换为新的
+               
+cnpm -g install appium      安装appium
