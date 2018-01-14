@@ -1,0 +1,42 @@
+创建数据库
+      create database lixiang;   # 创建一个名称为Lixiang的数据库
+      create database lixiang character set utf8；  #创建一个使用utf8字符集的Lixiang数据库
+
+查看数据库
+      show databases;   #查看所有数据库
+      show create database lixiang  #显示创建数据库的信息。。。。比如 使用的字符集是gbk还是uft8
+      alter database lixiang character set utf8   #修改数据库的字符集为uft8
+      drop database lixiang; # 删除数据库lixiang
+
+数据表的操作
+          mysql 中数据类型： bit   int（两字节，可以制定位数，如int（2）最大为两位的整数）
+                          float  double 
+                          char   varchar  (必须制定字符数)
+                  关键字 ： text     大文本
+                          date     日期--1992-05-06
+                          datetime 日期时间 1992-05-06 18：35：48
+                          timestamp 自动赋值为当前时间日期
+          #创建一个名称为zhongting的表              
+          create table zhongting(
+          id int,
+          name char(10),
+          age int(5),
+          sex char(10)
+          );
+            查看所有表： show tables;
+            查看指定表： show create table zhongting;
+            查看指定表的结构  show zhongting;
+            
+            删除表 ： drop table zhongting;
+            修改表：
+               删除表中一个字段 ：  alter table zhongting drop column sex;
+               增加表中一个字段 ：  alter table zhongting add column sex varchar(5);
+               修改表中一个字段:   alter table zhongting modify column sex char(5);
+               更改表名称：        rename table zhongting to zhongting001;
+               修改表的字符集 ：    alter table zhongting character set utf8;
+               
+             插入数据：
+                    insert into zhongting values('fir_name_001','lase_name_001',27,98.8,'man');
+                    insert into zhongting(first_name,age,sex) values('fir_name_002',30,'女');
+                    
+                          
