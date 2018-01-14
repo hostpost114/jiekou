@@ -16,3 +16,4 @@ sudo apt-get install -f
 
 重启后  去掉那个只“显示当前语言”的选项，然后搜索框输入sog，你会发现搜狗输入法已经有了，选中输入法即可
 
+https://github.com/getlantern/forum/issues/833
