@@ -8,9 +8,9 @@ def get_cookie():
             i=line.strip().split('=') #進行分割以 =
             print(i)  #打印出i，列表形式
             cookies={}   新建空列表
-            for t in i:  # 循環列表
-                cookies[t[0]]=t[1]  # #字典赋值，左边为key，右边为value
-                print(cookies) #打印cookies
+    
+            cookies[i[0]]=i[1]  # #字典赋值，左边为key，右边为value
+            print(cookies) #打印cookies
                 
                 
                 
