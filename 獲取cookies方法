@@ -1,0 +1,59 @@
+def get_cookie():
+    with open('999', 'r') as f:
+        # x=f.readlines()
+        # print(x)
+        # cookies={}
+        for line in f.read().split(';'):
+            # print(line)
+            i=line.strip().split('=') #進行分割以 =
+            print(i)  #打印出i，列表形式
+            cookies={}   新建空列表
+            for t in i:  # 循環列表
+                cookies[t[0]]=t[1]  # #字典赋值，左边为key，右边为value
+                print(cookies) #打印cookies
+                
+                
+                
+                
+>>>new_list= [['key1','value1'],['key2','value2'],['key3','value3']]
+>>>new_dict = {}
+>>> for i in new_list:
+...   new_dict[i[0]] = i[1]                #字典赋值，左边为key，右边为value
+...
+>>> new_dict
+{'key3': 'value3', 'key2': 'value2', 'key1': 'value1'}
+
+
+
+
+#-*- coding: UTF-8 -*-
+import requests
+from bs4 import BeautifulSoup
+#将cookies转换成字典形式，zhihu_cookie为保存的cookie文件，跟程序处在同一路径
+def get_cookie():
+    with open('999','r') as f:
+        cookies={}
+        for line in f.read().split(';'):
+            name,value=line.strip().split('=',1)  1代表只分割一次
+            cookies[name]=value 
+        return cookies
+
+s = requests.Session()
+url = 'https://www.zhihu.com/people/dager-55/activities'
+headers = {
+'User-Agent':'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0'
+     }
+req2 = s.get(url, headers = headers, cookies = get_cookie(), verify=False)
+html = req2.content
+soup = BeautifulSoup(req2.text, 'html.parser')
+#
+print(soup.prettify())
+#将获取到的页面源码写入zhihu.html文件中
+with open('zhihu.html','w') as fl:
+    fl.write(html)
+
+
+作者：black3y
+链接：https://www.jianshu.com/p/c94de9f1ef7c
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
