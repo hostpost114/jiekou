@@ -11,6 +11,7 @@ def get_cookie():
     
             cookies[i[0]]=i[1]  # #字典赋值，左边为key，右边为value
             print(cookies) #打印cookies
+        return cookies
                 
                 
                 
@@ -54,6 +55,6 @@ with open('zhihu.html','w') as fl:
 
 
 作者：black3y
-链接：https://www.jianshu.com/p/c94de9f1ef7c
+链接：https:/www.jianshu.com/p/c94de9f1ef7c
 來源：简书
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
