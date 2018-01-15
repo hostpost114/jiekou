@@ -12,3 +12,19 @@ npm install npm@latest -g    ----@  后边跟随版本号
                如果node 版本过低 可以去/usr/local/bin  中替换为新的
                
 cnpm -g install appium      安装appium
+
+
+
+huoqucookies
+def get_cookie():
+    with open('999', 'r') as f:
+        # x=f.readlines()
+        # print(x)
+        cookies={}
+        for line in f.read().split(';'):
+            name,value=line.strip().split('=',1)  #1代表只分割一次
+            cookies[name]=value
+        # print(cookies)
+        return cookies
+get_cookie()
+#
