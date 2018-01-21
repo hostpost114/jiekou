@@ -69,3 +69,6 @@ https://www.rddoc.com/doc/Python/3.6.0/zh/library/tkinter/               
 netsh wlan show profile key=clear ssid     查看wifi密码
 
 
+http://www.cnblogs.com/xinleishare/p/4793538.html      Appium 服务命令行参数
+
+
