@@ -1,0 +1,35 @@
+#appium debug
+from appium import webdriver
+from time import sleep
+import unittest
+class ApTest(unittest.TestCase):
+    def setUp(self):
+        desired_caps = {
+        'platformName' :'Android',
+        'platformVersion': '8.1',
+        'deviceName' : 'a4e7ce58',
+        'appPackage' :'com.android.mms' ,# 'com.android.contacts'
+        'appActivity': '.ui.ConversationList',  # '.activities.DialtactsActivity'
+        'unicodekeybord' : 'True',
+        "resetKeyboard":"True"
+        }
+        
+        
+        # desired_caps = {}
+        # desired_caps['platformName'] = 'Android'
+        # desired_caps['platformVersion'] = '8.1'
+        # desired_caps['deviceName'] = 'a4e7ce58'
+        # desired_caps['appPackage'] = ' com.android.mms'
+        # desired_caps['appActivity'] = '.ui.ConversationList'
+        # desired_caps['noReset'] = False
+        # desired_caps["unicodeKeyboard"] = "True"
+        # desired_caps["resetKeyboard"] = "True"
+        self.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
+        self.driver.implicitly_wait(60)
+    def test_login(self):
+        pass
+    def tearDown(self):
+        self.driver.quit()
+
+if __name__ == '__main__':
+    unittest.main()
