@@ -8,7 +8,13 @@ sudo dpkg -i sogoupinyin_2.2.0.0102_amd64.deb     安装搜狗拼音
 
 选择小企鹅输入法（fcitx）
 
+( 搜狗拼音deb包在Ubuntu 16.04无法安装            
 
+sudo apt-get upgrade -f 
+
+gengxin               sudo apt-get update 
+
+)
 
 设置内报错可以修复
 sudo apt-get install -f  
