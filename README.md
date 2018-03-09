@@ -71,4 +71,4 @@ netsh wlan show profile key=clear ssid     查看wifi密码
 
 http://www.cnblogs.com/xinleishare/p/4793538.html      Appium 服务命令行参数
 
-
+https://testerhome.com/wiki/appcrawler          testerhome
