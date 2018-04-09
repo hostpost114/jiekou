@@ -1,0 +1,44 @@
+https://segmentfault.com/q/1010000000094816
+
+{
+    "id": "some",
+    "title": "some",
+    "author": {
+        "name": "\u95eb\u9759"
+    },
+    "link": [{
+        "@attributes": {
+            "href": "http://localhost/",
+            "rel": "some"
+        }
+    },
+    {
+        "@attributes": {
+            "href": "http://localhost/",
+            "rel": "some"
+        }
+    },
+    {
+        "@attributes": {
+            "href": "http://localhost/",
+            "rel": "some"
+        }
+    }]
+}
+如上，对于服务器返回的json数据，如何获取Link中第一个@attributes的href值？
+
+
+var req = { ...你的返回对象... };
+var first_href_val = req.link[0]['@attributes'];
+
+
+
+
+
+
+2、验证返回相应中的字段值：
+var jsonData = JSON.parse(responseBody);
+tests["Check respose value status"] = jsonData.status === "1";
+tests["Check respose value infocode"] = jsonData.infocode === "10000";
+tests["Check respose value info"] = jsonData.info === "OK";
+tests["Check respose value adcode"] = jsonData.lives[0]['adcode'] === "610115";
