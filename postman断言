@@ -53,8 +53,8 @@ tests["body contains authenticated"] = responseBody.has("authenticated");
 
 
 
-
-
+4、 newman
+newman run C:\Users\Administrator.PC-201704031808\Desktop\ruby\999.postman_collection.json --reporters html --reporter-html-export C:\Users\Administrator.PC-201704031808\Desktop\ruby\123.html
 
 
 
