@@ -23,7 +23,42 @@ Node.js 安装
       npm install -g cnpm
       创建链接：ln -s cnpm安装路径 /usr/bin/cnpm
       cnpm安装路径的寻找：找到node安装目录，则可以找到cnpm的安装目录
-      
+
+
+
+
+                          (进入主题：
+
+                      修改/etc/profile文件，在末尾添加以下内容
+                    1
+                    2
+
+                    export NODE_HOME=/usr/local/node  //Node所在路径
+                    export PATH=$NODE_HOME/bin:$PATH
+
+                      修改完成后需要重新登陆才能生效，也可以执行命令 source /etc/profile 或者 . /etc/profile来生效（注意。与/etc/profile中有一个空格）
+
+                         查看PATH
+                    1
+                    2
+                    3
+                    4
+
+                    查看单个环境变量
+                    echo $PATH
+                    查看所有环境变量
+                    env
+
+                      这样就算配置完了，但是在使用非root用户的时候，使用sudo node来查看node的版本，发现报错：command not found，解决方法如下：
+
+                      使用vim 进入 /etc/sudoers文件，添加你的需要的路径到”secure_path“下，保存修改，问题就解决了)
+
+
+
+
+
+
+
    2. sdk配置
  3.  rethinkdb 
 """source /etc/lsb-release && echo "deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list
