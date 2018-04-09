@@ -42,3 +42,20 @@ tests["Check respose value status"] = jsonData.status === "1";
 tests["Check respose value infocode"] = jsonData.infocode === "10000";
 tests["Check respose value info"] = jsonData.info === "OK";
 tests["Check respose value adcode"] = jsonData.lives[0]['adcode'] === "610115";
+
+
+
+3、
+
+tests["response code is 200"] = responseCode.code === 200;
+tests["body contains authenticated"] = responseBody.has("authenticated");
+
+
+
+
+
+
+
+
+
+
