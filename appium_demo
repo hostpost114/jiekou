@@ -33,3 +33,20 @@ class ApTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+"""      
+Appium 滑动解决方案，存在即点击
+
+height = self.driver.get_window_size()['height']
+        width = self.driver.get_window_size()['width']
+        var = 1  
+        while var < 15:
+            try:
+                self.driver.find_element_by_xpath("//*[@text='Dialer Receives Incoming Call']").click()
+
+            except:
+                self.driver.swipe(width / 2, height * 3 / 4, width / 2, height * 1 / 4)
+                sleep(5)
+            continue
+
+
+"""
