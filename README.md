@@ -82,3 +82,18 @@ https://testerhome.com/wiki/appcrawler          testerhome
 
 
 self.driver.find_element(By.XPATH,"//*[@text='Audio Frequency Line Test']").click()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+http://pro.sr1.me/post/android-sdk-download-links
