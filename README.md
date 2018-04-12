@@ -97,3 +97,5 @@ self.driver.find_element(By.XPATH,"//*[@text='Audio Frequency Line Test']").clic
 
 
 http://pro.sr1.me/post/android-sdk-download-links
+
+http://mirrors.neusoft.edu.cn/android/repository/
