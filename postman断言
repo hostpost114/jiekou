@@ -57,5 +57,24 @@ tests["body contains authenticated"] = responseBody.has("authenticated");
 newman run C:\Users\Administrator.PC-201704031808\Desktop\ruby\999.postman_collection.json --reporters html --reporter-html-export C:\Users\Administrator.PC-201704031808\Desktop\ruby\123.html
 
 
+5、设置postman前置条件。。。。
+
+const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;  // 随机整数
+const getRandomValue = list => list[randomInt(0, list.length - 1)];
+const chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+let randomJobNum = '';
+for (let i = 0 ;i < 5; i++){
+    randomJobNum += getRandomValue(chars);
+}
+var a = 2797;
+var b = a++;
+var sum = parseInt(a) + parseInt(b);
+postman.setEnvironmentVariable("jobNum",1 + randomJobNum);
+postman.setEnvironmentVariable("cardno",sum);
+
+"""jobNum 需要在环境变量中配置，以便复制
+cardno"""
+
+
 
 
