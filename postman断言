@@ -76,5 +76,12 @@ postman.setEnvironmentVariable("cardno",sum);
 cardno"""
 
 
+jenkins乱码：在Windows的环境变量中添加：
+
+JAVA_TOOL_OPTIONS = -Dfile.encoding=UTF8
+
+配置好后，重启Jenkins即可
+
+
 
 
